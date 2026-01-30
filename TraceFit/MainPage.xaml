@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TraceFit.MainPage"
+             BackgroundColor="{StaticResource Bg0}"
+             Padding="0">
+
+    <AbsoluteLayout>
+
+        <!-- CANVAS FULLSCREEN -->
+        <GraphicsView x:Name="BoardView"
+                      AbsoluteLayout.LayoutBounds="0,0,1,1"
+                      AbsoluteLayout.LayoutFlags="All" />
+
+        <!-- HUD CENTRAL (NÃO BLOQUEIA TOQUE/MOUSE) -->
+        <Grid InputTransparent="True"
+              AbsoluteLayout.LayoutBounds="0.5,0.5,0.92,-1"
+              AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+              RowDefinitions="Auto,Auto,Auto,Auto"
+              RowSpacing="6"
+              HorizontalOptions="Center"
+              VerticalOptions="Center">
+
+            <Grid RowDefinitions="Auto"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center">
+
+                <GraphicsView x:Name="GaugeView"
+                              HeightRequest="200"
+                              WidthRequest="200"
+                              HorizontalOptions="Center"
+                              VerticalOptions="Center"
+                              InputTransparent="True" />
+
+                <StackLayout Spacing="-6"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             InputTransparent="True">
+
+                    <Label x:Name="PercentText"
+                           Text="0.0%"
+                           FontFamily="OpenSansSemibold"
+                           FontSize="52"
+                           HorizontalTextAlignment="Center"
+                           TextColor="{StaticResource Text}"
+                           InputTransparent="True" />
+
+                    <Label Text="CÍRCULO PERFEITO"
+                           FontFamily="OpenSansSemibold"
+                           FontSize="12"
+                           HorizontalTextAlignment="Center"
+                           TextColor="{StaticResource Muted}"
+                           Opacity="0.9"
+                           InputTransparent="True"/>
+                </StackLayout>
+            </Grid>
+
+            <Frame Grid.Row="1"
+                   BackgroundColor="#12182B"
+                   BorderColor="{StaticResource Stroke}"
+                   CornerRadius="999"
+                   Padding="14,8"
+                   HasShadow="False"
+                   HorizontalOptions="Center"
+                   InputTransparent="True">
+                <Label x:Name="MsgBadge"
+                       Text="BORA!"
+                       FontFamily="OpenSansSemibold"
+                       FontSize="12"
+                       TextColor="{StaticResource Text}"
+                       InputTransparent="True"/>
+            </Frame>
+
+            <Label x:Name="HeadlineText"
+                   Grid.Row="2"
+                   Text="Desenhe um círculo livre ✨"
+                   FontFamily="OpenSansSemibold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource Text}"
+                   InputTransparent="True" />
+
+            <Label x:Name="SubText"
+                   Grid.Row="3"
+                   Text="Dica: tente fechar o círculo e dar a volta completa (360°)."
+                   FontSize="13"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource Muted}"
+                   InputTransparent="True" />
+        </Grid>
+
+        <!-- TOP BAR VISUAL (NÃO BLOQUEIA INPUT) -->
+        <Grid InputTransparent="True"
+              AbsoluteLayout.LayoutBounds="0,0,1,64"
+              AbsoluteLayout.LayoutFlags="WidthProportional"
+              Padding="14,10"
+              ColumnDefinitions="*,Auto"
+              BackgroundColor="#070910"
+              Opacity="0.92">
+
+            <StackLayout Spacing="0" InputTransparent="True">
+                <Label Text="TraceFit"
+                       FontFamily="OpenSansSemibold"
+                       FontSize="16"
+                       InputTransparent="True" />
+                <Label Text="Brinque tentando o círculo perfeito"
+                       FontSize="12"
+                       TextColor="{StaticResource Muted}"
+                       InputTransparent="True" />
+            </StackLayout>
+
+            <!-- Só um hint no topo (não clicável) -->
+            <!--<Frame Grid.Column="1"
+                   Padding="10,6"
+                   CornerRadius="12"
+                   BackgroundColor="#12182B"
+                   BorderColor="{StaticResource Stroke}"
+                   HasShadow="False"
+                   HorizontalOptions="End"
+                   InputTransparent="True">
+                <Label Text="Desenhe por cima do HUD 😄"
+                       FontSize="11"
+                       TextColor="{StaticResource Muted}"
+                       InputTransparent="True"/>
+            </Frame>-->
+        </Grid>
+
+        <!-- BOTÕES (Clicáveis) - ilha pequena no canto -->
+        <Grid AbsoluteLayout.LayoutBounds="1,0,180,64"
+              AbsoluteLayout.LayoutFlags="PositionProportional"
+              Padding="10"
+              ColumnDefinitions="Auto,Auto"
+              ColumnSpacing="10"
+              InputTransparent="False">
+
+            <Button Text="Limpar"
+                    Clicked="OnClearClicked"
+                    BackgroundColor="#1A2340"
+                    BorderColor="{StaticResource Stroke}"
+                    BorderWidth="1"
+                    TextColor="{StaticResource Text}"
+                    Padding="12,10"
+                    CornerRadius="14" />
+
+            <Button Grid.Column="1"
+                    Text="Novo"
+                    Clicked="OnNewClicked"
+                    BackgroundColor="#7A5CFF"
+                    TextColor="White"
+                    Padding="12,10"
+                    CornerRadius="14" />
+        </Grid>
+
+    </AbsoluteLayout>
+</ContentPage>

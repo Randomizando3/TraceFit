@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TraceFit.App">
+    <Application.Resources>
+
+        <Color x:Key="Bg0">#090B10</Color>
+        <Color x:Key="Bg1">#0E1220</Color>
+        <Color x:Key="Card">#131A2D</Color>
+        <Color x:Key="Stroke">#243152</Color>
+        <Color x:Key="Text">#EAF0FF</Color>
+        <Color x:Key="Muted">#A7B3D6</Color>
+
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource Text}" />
+            <Setter Property="FontFamily" Value="OpenSansRegular" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="OpenSansSemibold" />
+            <Setter Property="CornerRadius" Value="14" />
+            <Setter Property="Padding" Value="14,12" />
+        </Style>
+
+    </Application.Resources>
+</Application>

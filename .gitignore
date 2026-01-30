@@ -1,0 +1,97 @@
+############################
+# .NET / Visual Studio
+############################
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+############################
+# Build / Publish
+############################
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+publish/
+app.publish/
+
+############################
+# Rider / VS Code
+############################
+.idea/
+.vscode/
+*.code-workspace
+
+############################
+# OS / Editor
+############################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+############################
+# MAUI / Xamarin / Android
+############################
+*.apk
+*.aab
+*.keystore
+*.jks
+android.keystore
+*.log
+
+# Android intermediates
+**/obj/Debug/android/
+**/obj/Release/android/
+**/obj/**/android/
+
+############################
+# iOS / MacCatalyst
+############################
+*.app
+*.ipa
+*.dSYM
+*.xcarchive
+*.plist.bak
+
+############################
+# Windows / MSIX
+############################
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle
+*.cer
+
+############################
+# NuGet
+############################
+*.nupkg
+packages/
+.nuget/
+.nuget/packages/
+
+############################
+# Test / Coverage
+############################
+TestResults/
+coverage/
+coverage.cobertura.xml
+
+############################
+# Logs / Temp
+############################
+*.tmp
+*.temp
+*.bak
+*.old
+*.cache
+
+############################
+# MAUI assets cache
+############################
+**/Resources/**/obj/
