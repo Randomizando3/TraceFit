@@ -1,7 +1,7 @@
 # TraceFit
 
 ## English
-TraceFit is a .NET MAUI app built around a drawing challenge in which the user traces shapes and receives real-time visual feedback and scoring.
+.NET MAUI app built around a drawing challenge in which the user traces shapes and receives real-time visual feedback and scoring.
 
 ### Features identified
 - Full-screen drawing area
@@ -19,18 +19,18 @@ TraceFit is a .NET MAUI app built around a drawing challenge in which the user t
 2. Install the .NET MAUI workload.
 3. Restore packages and run on the desired platform.
 
-## PortuguÃªs
-TraceFit Ã© um app em .NET MAUI construÃ­do em torno de um desafio de desenho no qual o usuÃ¡rio traÃ§a formas e recebe feedback visual e pontuaÃ§Ã£o em tempo real.
+## Português
+App em .NET MAUI construído em torno de um desafio de desenho no qual o usuário traça formas e recebe feedback visual e pontuação em tempo real.
 
 ### Funcionalidades identificadas
-- Ãrea de desenho em tela cheia
-- Medidor visual de pontuaÃ§Ã£o
-- Regras de avaliaÃ§Ã£o do traÃ§ado
-- Feedback motivacional durante a experiÃªncia
+- Área de desenho em tela cheia
+- Medidor visual de pontuação
+- Regras de avaliação do traçado
+- Feedback motivacional durante a experiência
 
 ### Estrutura do projeto
-- `Core/TraceEngine.cs`: regras de pontuaÃ§Ã£o e avaliaÃ§Ã£o
-- `Core/BoardDrawable.cs` e `Core/GaugeDrawable.cs`: renderizaÃ§Ã£o visual
+- `Core/TraceEngine.cs`: regras de pontuação e avaliação
+- `Core/BoardDrawable.cs` e `Core/GaugeDrawable.cs`: renderização visual
 - `MainPage.xaml`: tela principal do desafio
 
 ### Executando localmente
