@@ -10,12 +10,12 @@
 - Motivational feedback during play
 
 ### Project structure
-- `Core/TraceEngine.cs`: scoring and evaluation rules
-- `Core/BoardDrawable.cs` and `Core/GaugeDrawable.cs`: visual rendering
-- `MainPage.xaml`: main challenge screen
+- Core/TraceEngine.cs: scoring and evaluation rules
+- Core/BoardDrawable.cs and Core/GaugeDrawable.cs: visual rendering
+- MainPage.xaml: main challenge screen
 
 ### Run locally
-1. Open `TraceFit/TraceFit.sln` in Visual Studio 2022.
+1. Open TraceFit/TraceFit.sln in Visual Studio 2022.
 2. Install the .NET MAUI workload.
 3. Restore packages and run on the desired platform.
 
@@ -29,11 +29,11 @@ App em .NET MAUI construído em torno de um desafio de desenho no qual o usuári
 - Feedback motivacional durante a experiência
 
 ### Estrutura do projeto
-- `Core/TraceEngine.cs`: regras de pontuação e avaliação
-- `Core/BoardDrawable.cs` e `Core/GaugeDrawable.cs`: renderização visual
-- `MainPage.xaml`: tela principal do desafio
+- Core/TraceEngine.cs: regras de pontuação e avaliação
+- Core/BoardDrawable.cs e Core/GaugeDrawable.cs: renderização visual
+- MainPage.xaml: tela principal do desafio
 
 ### Executando localmente
-1. Abra `TraceFit/TraceFit.sln` no Visual Studio 2022.
+1. Abra TraceFit/TraceFit.sln no Visual Studio 2022.
 2. Instale o workload do .NET MAUI.
 3. Restaure os pacotes e execute na plataforma desejada.
